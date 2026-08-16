@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b7o7aaca0dt5a"]
+
+[ext_resource type="Texture2D" uid="uid://c45ukkf5jkovx" path="res://assets/grass.png" id="1_d60fx"]
+[ext_resource type="Shader" uid="uid://bq2c527a2s2ht" path="res://instances/grass.gdshader" id="1_kmuic"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d60fx"]
+render_priority = 0
+shader = ExtResource("1_kmuic")
+shader_parameter/texture_albedo = ExtResource("1_d60fx")
+shader_parameter/wind_direction = Vector2(1, 0.5)
+shader_parameter/wind_speed = 2.0
+shader_parameter/wind_strength = 0.15
+shader_parameter/wind_scale = 1.0
+shader_parameter/alpha_scissor_threshold = 0.5
+
+[node name="Grass" type="Sprite3D" unique_id=857827496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12164116, 0.0073072314, -0.05458498)
+material_override = SubResource("ShaderMaterial_d60fx")
+texture_filter = 0
+texture = ExtResource("1_d60fx")

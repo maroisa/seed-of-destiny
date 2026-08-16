@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://lqbor4c85bhu"]
+
+[ext_resource type="PackedScene" uid="uid://dvjnkynwr7spv" path="res://characters/mbok_rondo.tscn" id="1_kqs1s"]
+[ext_resource type="PackedScene" uid="uid://b7o7aaca0dt5a" path="res://instances/grass.tscn" id="2_32lhk"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_60u42"]
+size = Vector2(100, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_io8um"]
+albedo_color = Color(0.31866667, 0.4, 0.156, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_io8um"]
+size = Vector3(100, 0.1, 100)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_io8um"]
+
+[sub_resource type="Sky" id="Sky_kqs1s"]
+sky_material = SubResource("ProceduralSkyMaterial_io8um")
+
+[sub_resource type="Environment" id="Environment_io8um"]
+background_mode = 2
+sky = SubResource("Sky_kqs1s")
+
+[node name="World" type="Node3D" unique_id=233716926]
+
+[node name="Plane" type="StaticBody3D" parent="." unique_id=1743492594]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Plane" unique_id=694459571]
+mesh = SubResource("PlaneMesh_60u42")
+surface_material_override/0 = SubResource("StandardMaterial3D_io8um")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane" unique_id=1424572132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02, 0)
+shape = SubResource("BoxShape3D_io8um")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=190317283]
+environment = SubResource("Environment_io8um")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=812881444]
+transform = Transform3D(0.7467747, 0.4711992, -0.46936002, 0, 0.70572275, 0.7084881, 0.6650771, -0.529081, 0.52701586, 0, 1.7333314, 0)
+shadow_enabled = true
+
+[node name="MbokRondo" parent="." unique_id=61267331 instance=ExtResource("1_kqs1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87782204, 0)
+
+[node name="Grass" parent="." unique_id=857827496 instance=ExtResource("2_32lhk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.12164116, 0.8073073, -3.6545851)
+
+[node name="Grass2" parent="." unique_id=20261089 instance=ExtResource("2_32lhk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.95321, 0.8073073, -1.9352791)
+
+[node name="Grass8" parent="." unique_id=1904957725 instance=ExtResource("2_32lhk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.112049, 0.8073073, -12.315633)
+
+[node name="Grass9" parent="." unique_id=1923759618 instance=ExtResource("2_32lhk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.385288, 0.8073073, -10.596327)
+
+[node name="Grass7" parent="." unique_id=1125632588 instance=ExtResource("2_32lhk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.041124, 0.8073073, -1.9352791)
+
+[node name="Grass3" parent="." unique_id=474850828 instance=ExtResource("2_32lhk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.121641, 0.8073073, 3.8244474)
+
+[node name="Grass4" parent="." unique_id=261637828 instance=ExtResource("2_32lhk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.1534443, 0.8073073, 3.8244474)
+
+[node name="Grass5" parent="." unique_id=1033872916 instance=ExtResource("2_32lhk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.1534443, 0.8073073, -15.856331)
+
+[node name="Grass6" parent="." unique_id=1047660427 instance=ExtResource("2_32lhk")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 16.703117, 0.8073073, -1.9982214)
