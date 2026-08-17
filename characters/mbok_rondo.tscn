@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dvjnkynwr7spv"]
 
 [ext_resource type="Script" uid="uid://beycyqr7e8rqd" path="res://characters/mbok_rondo.gd" id="1_je42p"]
-[ext_resource type="Texture2D" uid="uid://bgltw31b33cqp" path="res://assets/mbok-rondo.png" id="1_tbkjm"]
+[ext_resource type="Texture2D" uid="uid://dcdd3xnysnerp" path="res://assets/mbok-rondo.svg" id="2_je42p"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vs8dt"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_je42p"]
 
 [sub_resource type="Animation" id="Animation_f0pnx"]
 length = 0.001
@@ -129,14 +129,14 @@ transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition
 script = ExtResource("1_je42p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1800020104]
-shape = SubResource("CapsuleShape3D_vs8dt")
+shape = SubResource("BoxShape3D_je42p")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=642088949]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0.24024075, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5523016, 0)
 shaded = true
 alpha_cut = 1
-texture_filter = 0
-texture = ExtResource("1_tbkjm")
+texture_filter = 1
+texture = ExtResource("2_je42p")
 vframes = 4
 frame = 1
 
@@ -149,5 +149,5 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/Walk/blend_position = Vector2(0.042207837, -0.18721461)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1349591535]
-transform = Transform3D(1, 0, 0, 0, 0.8660253, 0.50000006, 0, -0.50000006, 0.8660253, 0, 4, 7)
+transform = Transform3D(0.9999982, 0.0018737458, -4.1185238e-05, -0.0015982981, 0.8640616, 0.50338376, 0.0009788076, -0.5033828, 0.8640631, 0, 6, 10)
 current = true

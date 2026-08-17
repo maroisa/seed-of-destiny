@@ -1,20 +1,52 @@
 [gd_scene format=3 uid="uid://b7o7aaca0dt5a"]
 
-[ext_resource type="Texture2D" uid="uid://c45ukkf5jkovx" path="res://assets/grass.png" id="1_d60fx"]
 [ext_resource type="Shader" uid="uid://bq2c527a2s2ht" path="res://instances/grass.gdshader" id="1_kmuic"]
+[ext_resource type="Texture2D" uid="uid://dq0t18lak34bc" path="res://assets/grass/grass_tall.svg" id="2_iyil1"]
+[ext_resource type="Texture2D" uid="uid://u4bf22ioko6c" path="res://assets/grass/grass_medium.svg" id="3_1npok"]
+[ext_resource type="Texture2D" uid="uid://dgr041ahgj2ba" path="res://assets/grass/grass_short.svg" id="3_32kg7"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_d60fx"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_60u42"]
 render_priority = 0
 shader = ExtResource("1_kmuic")
-shader_parameter/texture_albedo = ExtResource("1_d60fx")
+shader_parameter/texture_albedo = ExtResource("2_iyil1")
 shader_parameter/wind_direction = Vector2(1, 0.5)
 shader_parameter/wind_speed = 2.0
 shader_parameter/wind_strength = 0.15
 shader_parameter/wind_scale = 1.0
 shader_parameter/alpha_scissor_threshold = 0.5
 
-[node name="Grass" type="Sprite3D" unique_id=857827496]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12164116, 0.0073072314, -0.05458498)
-material_override = SubResource("ShaderMaterial_d60fx")
-texture_filter = 0
-texture = ExtResource("1_d60fx")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_32kg7"]
+render_priority = 0
+shader = ExtResource("1_kmuic")
+shader_parameter/texture_albedo = ExtResource("3_1npok")
+shader_parameter/wind_direction = Vector2(0.8, 0.5)
+shader_parameter/wind_speed = 2.0
+shader_parameter/wind_strength = 0.15
+shader_parameter/wind_scale = 1.0
+shader_parameter/alpha_scissor_threshold = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o1yqv"]
+render_priority = 0
+shader = ExtResource("1_kmuic")
+shader_parameter/texture_albedo = ExtResource("3_32kg7")
+shader_parameter/wind_direction = Vector2(-1, 0.5)
+shader_parameter/wind_speed = 2.0
+shader_parameter/wind_strength = 0.15
+shader_parameter/wind_scale = 1.0
+shader_parameter/alpha_scissor_threshold = 0.5
+
+[node name="Grass" type="Node3D" unique_id=1714595923]
+
+[node name="Tall" type="Sprite3D" parent="." unique_id=743347245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
+material_override = SubResource("ShaderMaterial_60u42")
+texture = ExtResource("2_iyil1")
+
+[node name="Medium" type="Sprite3D" parent="." unique_id=1319759448]
+material_override = SubResource("ShaderMaterial_32kg7")
+texture = ExtResource("3_1npok")
+
+[node name="Short" type="Sprite3D" parent="." unique_id=1189323653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
+material_override = SubResource("ShaderMaterial_o1yqv")
+texture = ExtResource("3_32kg7")
