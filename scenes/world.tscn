@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ddstitje3q71l" path="res://assets/grass/grass_tile.svg" id="1_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://dvjnkynwr7spv" path="res://characters/mbok_rondo.tscn" id="1_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://b7o7aaca0dt5a" path="res://instances/grass.tscn" id="3_4wyf3"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_60u42"]
 size = Vector2(100, 100)
@@ -43,3 +44,12 @@ shadow_enabled = true
 
 [node name="MbokRondo" parent="." unique_id=61267331 instance=ExtResource("1_rwgxs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.87782204, 0)
+
+[node name="Grass" parent="." unique_id=1714595923 instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2219992, -8.3818)
+
+[node name="Grass2" parent="." unique_id=1826239398 instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0728807, 2.2219992, -8.3818)
+
+[node name="Grass3" parent="." unique_id=1449662772 instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7016516, 2.2219992, 8.059784)

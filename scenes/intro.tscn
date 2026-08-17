@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://crwkgrnhuylv8"]
+
+[ext_resource type="Texture2D" uid="uid://dhcxpe783144r" path="res://assets/illustrations/berdoa.jpg" id="1_ioskq"]
+[ext_resource type="Script" uid="uid://dstgk2ypox5nm" path="res://scenes/intro.gd" id="1_yjqpq"]
+[ext_resource type="Texture2D" uid="uid://dpgkoaxoulbkr" path="res://assets/illustrations/buto.jpg" id="2_yjqpq"]
+[ext_resource type="Texture2D" uid="uid://bkcbdfvev54uk" path="res://assets/illustrations/meminta_buto.jpg" id="3_4bx60"]
+
+[sub_resource type="Animation" id="Animation_yjqpq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ill:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LabelGradient/M/Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Ill:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ioskq")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LabelGradient/M/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Mbok Rondo wanted a child but she is maidenless"]
+}
+
+[sub_resource type="Animation" id="Animation_ioskq"]
+resource_name = "all"
+length = 17.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ill:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 5.5, 6, 7, 8, 10, 10.5, 11.5, 12.5, 14.5, 15.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LabelGradient/M/Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.5, 3.5, 4.5, 5, 8, 9, 10, 10.5, 12.5, 13.5, 14.5, 15.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LabelGradient/M/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.5, 8, 11.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["Mbok Rondo wanted a child but she is maidenless", "She met a Buto Ijo", "She asked for a child. The Buto Ijo gave her a seed"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Ill:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6, 6.5, 10.5, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_ioskq"), ExtResource("1_ioskq"), ExtResource("2_yjqpq"), ExtResource("2_yjqpq"), ExtResource("3_4bx60")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yjqpq"]
+_data = {
+&"RESET": SubResource("Animation_yjqpq"),
+&"all": SubResource("Animation_ioskq")
+}
+
+[sub_resource type="Gradient" id="Gradient_ioskq"]
+offsets = PackedFloat32Array(0.64457834, 1)
+colors = PackedColorArray(0, 0, 0, 0.60784316, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ioskq"]
+gradient = SubResource("Gradient_ioskq")
+height = 200
+fill_from = Vector2(1, 1)
+
+[node name="Intro" type="Control" unique_id=1321385921]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yjqpq")
+
+[node name="Black" type="ColorRect" parent="." unique_id=2031799531]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Ill" type="TextureRect" parent="." unique_id=1017259386]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ioskq")
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1964768839]
+libraries/ = SubResource("AnimationLibrary_yjqpq")
+autoplay = &"all"
+
+[node name="LabelGradient" type="TextureRect" parent="." unique_id=1773098533]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_ioskq")
+
+[node name="M" type="MarginContainer" parent="LabelGradient" unique_id=1482576857]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="LabelGradient/M" unique_id=103762357]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Mbok Rondo wanted a child but she is maidenless"
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0

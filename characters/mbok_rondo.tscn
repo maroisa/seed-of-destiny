@@ -134,6 +134,7 @@ shape = SubResource("BoxShape3D_je42p")
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=642088949]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5523016, 0)
 shaded = true
+double_sided = false
 alpha_cut = 1
 texture_filter = 1
 texture = ExtResource("2_je42p")
