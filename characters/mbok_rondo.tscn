@@ -149,5 +149,5 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/Walk/blend_position = Vector2(0.042207837, -0.18721461)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1349591535]
-transform = Transform3D(0.9999982, 0.0018737458, -4.1185238e-05, -0.0015982981, 0.8640616, 0.50338376, 0.0009788076, -0.5033828, 0.8640631, 0, 6, 10)
+transform = Transform3D(0.9999982, 0.0018737458, -4.1185238e-05, -0.0015982981, 0.8640616, 0.50338376, 0.0009788076, -0.5033828, 0.8640631, 0, 7, 10)
 current = true
